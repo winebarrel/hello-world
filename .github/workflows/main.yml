@@ -11,6 +11,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: winebarrel/lastcmt@v6.0.0
+      - uses: winebarrel/lastcmt@v0.6.0
       - run: |
           echo test | lastcmnt ${{ github.event.number }} 
