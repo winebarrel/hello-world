@@ -14,4 +14,5 @@ jobs:
       - env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          gh pr view
           echo test | lastcmt ${{ github.event.number }} 
