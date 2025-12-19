@@ -15,5 +15,5 @@ jobs:
       - env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr view ${{ github.event.number }}
+          gh pr view ${{ github.event.number }} --json mergeable -q '.mergeable'
           echo test | lastcmt ${{ github.event.number }} 
