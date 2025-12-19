@@ -1,0 +1,16 @@
+name: build
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  pull-requests: write
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: winebarrel/lastcmt@v6
+      - run: |
+          echo test | lastcmnt ${{ github.event.number }} 
