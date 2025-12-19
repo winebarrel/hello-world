@@ -8,9 +8,9 @@ permissions:
   pull-requests: write
   
 jobs:
-  build:
+  my-job:
     runs-on: ubuntu-latest
     steps:
       - uses: winebarrel/lastcmt@v0.6.2
       - run: |
-          echo test | lastcmnt ${{ github.event.number }} 
+          echo test | lastcmt ${{ github.event.number }} 
